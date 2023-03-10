@@ -1,1 +1,70 @@
+board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(board)
 
+
+def display_board(board):
+    # Funkcja, która przyjmuje jeden parametr zawierający bieżący stan tablicy
+    # i wyświetla go w oknie konsoli.
+    print("+-----+-----+-----+")
+    print(f"|  {board[0][0]}  |  {board[0][1]}  |  {board[0][2]}  |")
+    print("+-----+-----+-----+")
+    print(f"|  {board[1][0]}  |  {board[1][1]}  |  {board[1][2]}  |")
+    print("+-----+-----+-----+")
+    print(f"|  {board[2][0]}  |  {board[2][1]}  |  {board[2][2]}  |")
+    print("+-----+-----+-----+")
+
+
+def enter_move(board):
+    # Funkcja, która przyjmuje parametr odzwierciedlający bieżący stan tablicy,
+    # prosi użytkownika o wykonanie ruchu,
+    # sprawdza dane wejściowe i aktualizuje tablicę zgodnie z decyzją użytkownika.
+    while True:
+        try:
+            move = int(input("Wybierz pole spośród wolnych pól 1-9:"))
+        except:
+            print("Wybór musi być cyfrą, spróbuj ponownie!")
+            continue
+        if 1 <= move <= 9:
+            match move:
+                case 1:
+                    print(f"Wybrano: {move}")
+                case 2:
+                    print(f"Wybrano: {move}")
+                case 3:
+                    print(f"Wybrano: {move}")
+                case 4:
+                    print(f"Wybrano: {move}")
+                case 5:
+                    print(f"Wybrano: {move}")
+                case 6:
+                    print(f"Wybrano: {move}")
+                case 7:
+                    print(f"Wybrano: {move}")
+                case 8:
+                    print(f"Wybrano: {move}")
+                case 9:
+                    print(f"Wybrano: {move}")
+            break
+        else:
+            print("Niepoprawny wybór, spróbuj ponownie!")
+
+
+def make_list_of_free_fields(board):
+    # Funkcja, która przegląda tablicę i tworzy listę wszystkich wolnych pól;
+    # lista składa się z krotek, a każda krotka zawiera parę liczb odzwierciedlających rząd i kolumnę.
+    pass
+
+
+def victory_for(board, sign):
+    # Funkcja, która dokonuje analizy stanu tablicy w celu sprawdzenia,
+    # czy użytkownik/gracz stosujący "O" lub "X" wygrał rozgrywkę.
+    pass
+
+
+def draw_move(board):
+    # Funkcja, która wykonuje ruch za komputer i aktualizuje tablicę.
+    pass
+
+
+display_board(board)
+#enter_move(board)
