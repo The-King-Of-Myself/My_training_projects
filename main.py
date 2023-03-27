@@ -130,15 +130,15 @@ def victory_for(board, sign):
             who_wins(sign)
         elif board[2][0] == board[1][1] == board[0][2] == sign:
             who_wins(sign)
-    else:
-        display_board(board)
-        print("Draw!")
-        end_flag = False
+    # else:
+    #     display_board(board)
+    #     print("Draw!")
+    #     end_flag = False
 
 
 def who_wins(sign):
     # W sytuacji, kiedy pojawią się trzy identyczne symbole w jednej linii, funkcja rozpoznaje, do którego z graczy
-    # one należą, i na tej podstawie przydziela zwycięstwo.8
+    # one należą, i na tej podstawie przydziela zwycięstwo.
 
     global end_flag
     if sign == 'X':
@@ -189,7 +189,7 @@ def draw_move(board):
             continue
     fields_left -= 1
     victory_for(board, 'X')
-    if fields_left == 0:
+    if fields_left == 0 and not end_flag:
         return
     return board
 
@@ -205,8 +205,9 @@ while end_flag:
     if not end_flag:
         break
     draw_move(board)
-    if fields_left == 0:
-        break
+    # if fields_left == 0 and end_flag:
+    #     print("Draw!")
+    #     break
 
 print("SEE YOU NEXT TIME! :)")
 
